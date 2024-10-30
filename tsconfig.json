@@ -15,26 +15,22 @@
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
     },
-
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "bundler", // 필요에 따라 "node"로 변경 가능
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["node"] // Node.js 타입 지원 추가
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
