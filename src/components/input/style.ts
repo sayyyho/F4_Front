@@ -51,6 +51,22 @@ export const InputWrap = styled.div<InputWrapProps>`
   border-radius: 8px;
   border: 1px solid #ced4da;
   background: #fff;
+
+  @media (max-width: 360px) {
+    width: 280px;
+  }
+`;
+
+export const DateInputWrap = styled.div`
+  width: 102px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  background: #fff;
+
+  @media (max-width: 360px) {
+    width: 82px;
+  }
 `;
 
 export const TextInput = styled.input`
@@ -66,7 +82,7 @@ export const TextInput = styled.input`
 `;
 
 // DateInput.tsx
-export const DateInputWrap = styled.div`
+export const DateInputContainer = styled.div`
   display: flex;
   gap: 17px;
 `;

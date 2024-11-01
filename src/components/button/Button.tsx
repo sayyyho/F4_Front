@@ -21,6 +21,10 @@ const Btn = styled.button`
   cursor: pointer;
   border: none;
   margin: 10px auto;
+
+  @media (max-width: 360px) {
+    width: 280px;
+  }
 `;
 
 interface ButtonProps {

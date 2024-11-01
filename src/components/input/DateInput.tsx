@@ -10,17 +10,17 @@ const DateInput: React.FC = () => {
         <S.EssentialIcon>*</S.EssentialIcon>
       </S.InputTitleWrapper>
 
-      <S.DateInputWrap>
-        <S.InputWrap width="102px">
+      <S.DateInputContainer>
+        <S.DateInputWrap>
           <S.TextInput type="number" maxLength={4} />
-        </S.InputWrap>
-        <S.InputWrap width="102px">
+        </S.DateInputWrap>
+        <S.DateInputWrap>
           <S.TextInput type="number" maxLength={2} />
-        </S.InputWrap>
-        <S.InputWrap width="102px">
+        </S.DateInputWrap>
+        <S.DateInputWrap>
           <S.TextInput type="number" maxLength={2} />
-        </S.InputWrap>
-      </S.DateInputWrap>
+        </S.DateInputWrap>
+      </S.DateInputContainer>
     </S.InputContainer>
   );
 };
