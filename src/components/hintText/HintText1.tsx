@@ -7,10 +7,12 @@ const HintTextWrapper = styled.div`
   gap: 10px;
 `;
 
-const HintTextHeadline2 = styled.h2`
+const HintTextHeadline2 = styled.h2<{ width?: string }>`
+  width: ${({ width }) => width || "240px"};
+  margin: 0 auto;
   color: #343a40;
   text-align: center;
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -21,7 +23,7 @@ const HintTextHeadline2 = styled.h2`
 const HintTextP1 = styled.p`
   color: #868e96;
   text-align: center;
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -29,11 +31,19 @@ const HintTextP1 = styled.p`
   letter-spacing: -0.1px;
 `;
 
-export default function HintText() {
+interface TextProps {
+  headline: string;
+  paragraph: string;
+  width?: string;
+}
+
+const HintText1: React.FC<TextProps> = ({ headline, paragraph, width }) => {
   return (
     <HintTextWrapper>
-      <HintTextHeadline2>당신의 정보를 입력해주세요.</HintTextHeadline2>
-      <HintTextP1>팀을 참가할 때 간단한 정보를 입력받아요.</HintTextP1>
+      <HintTextHeadline2 width={width}>{headline}</HintTextHeadline2>
+      <HintTextP1>{paragraph}</HintTextP1>
     </HintTextWrapper>
   );
-}
+};
+
+export default HintText1;
