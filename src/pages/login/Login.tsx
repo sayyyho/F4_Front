@@ -1,7 +1,7 @@
 // Login.tsx
 import Input from "@components/input/Input";
 import DateInput from "@components/input/DateInput";
-import HintText from "@components/login/HintText";
+import HintText from "@components/hintText/HintText1";
 import React from "react";
 import styled from "styled-components";
 import Button from "@components/button/Button";
@@ -30,7 +30,11 @@ const Login: React.FC = () => {
   return (
     <>
       <Container>
-        <HintText />
+        <HintText
+          width="320px"
+          headline="당신의 정보를 입력해주세요."
+          paragraph="팀을 참가할 때 간단한 정보를 입력받아요."
+        />
         <InputForm>
           <Input label="이름" essential hint="" />
           <DateInput />
